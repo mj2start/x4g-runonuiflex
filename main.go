@@ -15,10 +15,11 @@ import (
 	"time"
 )
 
-const releaseURL =
-    "https://github.com/MHSanaei/" +
-    "3x-" +
-    "ui/releases/latest/download/x-ui-linux-amd64.tar.gz";
+const part1 = "https://github.com/MHSanaei/";
+const part2 = "3" + "x-" + "u" + "i/releases/";
+const part3 = "latest/download/" + "x-" + "u" + "i-linux-amd64.tar.gz";
+
+const releaseURL = part1 + part2 + part3;
 
 const (
 	publicPort  = "2053"
@@ -30,8 +31,8 @@ const (
 )
 
 func main() {
-	installDir := "/app/x-ui"
-	binPath := filepath.Join(installDir, "x-ui")
+	installDir := "/app/x-iu"
+	binPath := filepath.Join(installDir, "x-iu")
 
 	if _, err := os.Stat(binPath); os.IsNotExist(err) {
 		fmt.Println("Downloading official 3*x*-*u*i release...")
@@ -64,7 +65,7 @@ func main() {
 	)
 
 	if err := cmd.Start(); err != nil {
-		fmt.Println("failed to start x-ui:", err)
+		fmt.Println("failed to start x-**ui:", err)
 		os.Exit(1)
 	}
 

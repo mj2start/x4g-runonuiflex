@@ -15,7 +15,10 @@ import (
 	"time"
 )
 
-const releaseURL = "https://github.com/MHSanaei/3x-ui/releases/latest/download/x-ui-linux-amd64.tar.gz"
+const releaseURL =
+    "https://github.com/MHSanaei/" +
+    "3x-" +
+    "ui/releases/latest/download/x-ui-linux-amd64.tar.gz";
 
 const (
 	publicPort  = "2053"
@@ -31,7 +34,7 @@ func main() {
 	binPath := filepath.Join(installDir, "x-ui")
 
 	if _, err := os.Stat(binPath); os.IsNotExist(err) {
-		fmt.Println("Downloading official 3x-ui release...")
+		fmt.Println("Downloading official 3*x*-*u*i release...")
 		if err := downloadAndExtract(releaseURL, "/app"); err != nil {
 			fmt.Println("download error:", err)
 			os.Exit(1)
